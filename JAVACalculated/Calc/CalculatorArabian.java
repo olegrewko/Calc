@@ -1,4 +1,4 @@
-package JAVAcalculatorEND.Calc;
+package JAVACalculated.Calc;
 
 
 import java.util.InputMismatchException;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 
-public class CalculatorEnd {
+public class CalculatorArabian {
     static Scanner scanner = new Scanner(System.in);
     public static char op;
     static String answer;
@@ -50,7 +50,7 @@ public class CalculatorEnd {
         return op;
     }
     public static int calculated(int num1, int num2, char op) {
-
+        JAVACalculated.Calculated002.op = op;
         int result = 0;
         switch (op){
             case '+':
