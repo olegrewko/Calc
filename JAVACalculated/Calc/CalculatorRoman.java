@@ -2,10 +2,9 @@ package JAVACalculated.Calc;
 
 import java.util.Scanner;
 
-import static JAVACalculated.Calc.CalculatorArabian.calculated;
-import static JAVACalculated.Calc.CalculatorArabian.operation;
 
-public class CalculatorRoman {
+
+public class CalculatorRoman extends CalculatorArabian {
     static Scanner scanner = new Scanner(System.in);
     public static char op;
     static String answer;
