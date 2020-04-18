@@ -1,4 +1,4 @@
-package JAVACalculated.Calc;
+package Lesson4.Calc;
 
 
 import java.util.InputMismatchException;
@@ -8,15 +8,22 @@ import java.util.Scanner;
 
 public class CalculatorArabian {
     static Scanner scanner = new Scanner(System.in);
+    public static int num1;
+    public static  int num2;
     public static char op;
-    static String answer;
+    public static int result;
+    public static String answer;
     public static void main(String[] args) {
         do {
-            int num1 = number();
+            num1 = number();
             op = operation();
-            int num2 = number();
-            int result = calculated(num1, num2, op);
-            System.out.println(num1 + " " + op + " " + num2 + " = " + result);
+            num2 = number();
+            result = calculated(num1, num2, op);
+           if((op == '/') & (num2 == 0)) {
+                System.out.println(num1 + " " + op + " " + num2 + " = INFINITY" );
+            } else {
+               System.out.println(num1 + " " + op + " " + num2 + " = " + result);
+            }
             Scanner scanner2 = new Scanner(System.in);
             System.out.println("Начать заново?(y/n)");
             answer = scanner2.nextLine();
@@ -24,7 +31,7 @@ public class CalculatorArabian {
                 System.out.println("Работа программы завершена");
                 return;
             }
-        } while ("n".equals(answer) || "y".equals(answer));
+        } while ("y".equals(answer) || "y".equals(answer));
     }
     public static int number() {
         System.out.println("Введите число");
@@ -50,7 +57,7 @@ public class CalculatorArabian {
         return op;
     }
     public static int calculated(int num1, int num2, char op) {
-        JAVACalculated.Calculated002.op = op;
+        CalculatorArabian.op = op;
         int result = 0;
         switch (op){
             case '+':
@@ -69,8 +76,9 @@ public class CalculatorArabian {
                     System.out.println("Exception : " + e);
                     scanner.nextLine();
                     System.out.println("Only integer non-zero parameters allowed");
+
                 }
-                break;
+                break ;
             default:
                 System.out.println("Оператор не найден");
                 result = calculated(num1, num2, operation());
