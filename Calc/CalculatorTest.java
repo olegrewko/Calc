@@ -1,4 +1,4 @@
-package Lesson4.Calc;
+package HomeworkLesson29.Calc.JAVACalculated.Calc;
 
 
 
@@ -25,7 +25,11 @@ public class CalculatorTest {
                 cA.op = cA.operation();
                 int num2 = cA.number();
                 int result = cA.calculated(num1, num2, cA.op);
-                System.out.println(num1 + " " + cA.op + " " + num2 + " = " + result);
+                if((cA.op == '/') & (num2 == 0)) {
+                    System.out.println(num1 + " " + cA.op + " " + num2 + " = INFINITY" );
+                } else {
+                    System.out.println(num1 + " " + cA.op + " " + num2 + " = " + result);
+                }
                 Scanner scanner2 = new Scanner(System.in);
                 System.out.println("Начать заново?(y/n)");
                 answer = scanner2.nextLine();
