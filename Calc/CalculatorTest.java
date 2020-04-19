@@ -1,16 +1,16 @@
-package HomeworkLesson29.Calc.JAVACalculated.Calc;
+package Calc;
 
 
 
 
 
-import JAVACalculated.Calc.CalculatorArabian;
-import JAVACalculated.Calc.CalculatorRoman;
+//import Calc.CalculatorArabian;
+//import Calc.CalculatorRoman;
 
 import java.util.Scanner;
 
 
-import static Lesson4.Calc.CalculatorArabian.calculated;
+import static Calc.CalculatorArabian.calculated;
 
 
 public class CalculatorTest {

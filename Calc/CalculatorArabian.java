@@ -1,4 +1,4 @@
-package HomeworkLesson29.Calc.JAVACalculated.Calc;
+package Calc;
 
 
 import java.util.InputMismatchException;

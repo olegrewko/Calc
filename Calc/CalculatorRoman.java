@@ -1,7 +1,8 @@
-package HomeworkLesson29.Calc.JAVACalculated.Calc;
-import JAVACalculated.Calc.CalculatorArabian;
+package Calc;
+import Calc.CalculatorArabian;
 
 import java.util.Scanner;
+
 public class CalculatorRoman extends CalculatorArabian {
     static Scanner scanner = new Scanner(System.in);
     public static String answer;
